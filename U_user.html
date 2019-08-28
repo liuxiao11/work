@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>个人信息</title>
+
+    <link rel="icon" href="http://gwcdn.sail2world.com/bi/2019/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/common.css?v=2019062162" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.css" rel="stylesheet">
+    <style>
+        .main-user{padding: 10px;}
+        .main-user .form-horizontal .span-control{border: none;box-shadow: none;}
+        .main-user .form-horizontal .form-group{width: 60%;}
+        .main-user .form-horizontal .form-group input[type='submit']{width: 88px;}
+    </style>
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container1">
+        <!-- 公共header -->
+        <div class="header">
+            <div class="header-contain">
+                <a class="logo" href="U_index.html">
+                    <img src="images/u1.png" alt="">
+                </a>
+                <div class="nav">
+                    <ul>
+                        <li class="active"><a href="U_index.html" title=""><div class="glyphicon glyphicon-home" aria-hidden="true"></div><p>首页</p></a></li>
+                        <li><a href="T_target.html" title=""><div class="glyphicon glyphicon-screenshot" aria-hidden="true"></div><p>目标</p></a></li>
+                        <li><a href="C_check.html" title=""><div class="glyphicon glyphicon-stats" aria-hidden="true"></div><p>考核</p></a></li>
+                        <li><a href="M_manage.html" title=""><div class="glyphicon glyphicon-globe" aria-hidden="true"></div><p>管理</p></a></li>
+                        <li><a href="S_set.html" title=""><div class="glyphicon glyphicon-cog" aria-hidden="true"></div><p>设置</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 侧边菜单栏 -->
+        <div class="left-menu">
+            <ul>
+                <li class="menu-title"><a href="U_index.html" title="">我的</a></li>
+                <li class="menulist"><a href="U_index.html" title=""><div class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></div>仪表盘</a></li>
+                <li class="menulist active"><a href="U_user.html" title=""><div class="glyphicon glyphicon-user" aria-hidden="true"></div>个人信息</a></li>
+                <li class="menulist "><a href="U_preference.html" title=""><div class="glyphicon glyphicon-cog" aria-hidden="true"></div>偏好设置</a></li>
+                <li class="menulist "><a href="login.html" title=""><div class="glyphicon glyphicon-log-out" aria-hidden="true"></div>注销</a></li>
+            </ul>
+        </div>
+        <!-- 主体内容 -->
+        <div class="container">
+            <div class="content-topbr">
+                <!--面包屑-->
+                <ul class="breadcrumb">
+                    <li>我的</li>
+                    <li>个人信息</li>
+                </ul>
+                <div class="top-user">
+                    <a href="U_user.html"><div class="glyphicon glyphicon-user" aria-hidden="true"></div>张三</a>
+                    <a href="login.html"><div class="glyphicon glyphicon-log-out" aria-hidden="true"></div>注销</a>
+                </div>
+            </div>
+            <div class="content-main">
+                <div class="main">
+                    <div class="main1top">
+                        <div class="mainicon"></div>个人信息
+                    </div>
+                    <div class="main-user">
+                        <form action="#" class="form-horizontal" role="form" id="userForm">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">姓名:</label>
+                                <div class="col-sm-10">
+                                    <span class="span-control form-control">张三</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">部门:</label>
+                                <div class="col-sm-10">
+                                    <span class="span-control form-control">平台技术,运维部</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">职务:</label>
+                                <div class="col-sm-10">
+                                    <span class="span-control form-control">主管</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">入职时间:</label>
+                                <div class="col-sm-10">
+                                    <span class="span-control form-control">2019-05-03</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">上级:</label>
+                                <div class="col-sm-10">
+                                    <span class="span-control form-control">XXXX</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">当前职级:</label>
+                                <div class="col-sm-10">
+                                    <span class="span-control form-control">T5</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">用户名:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" data-validation="length" data-validation-length="2-10" data-validation-error-msg="用户名须为2至10个字符" value="张三啊张三">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">密码:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="password" data-validation="custom" data-validation-regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])([^\s]){8,20}$|^(^$)$" data-validation-error-msg="密码须为8至20个字符（非空格）且至少有一个大写字母一个小写字母和一个数字" value="1sssAbbA">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">确认密码:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" data-validation="equalTo" data-validation-equal="#password" value="1sssAbbA">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">手机号:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" data-validation="custom" data-validation-regexp="^1[345789]\d{9}$" data-validation-error-msg="手机号格式不正确" value="18611632458">
+                                </div>
+                            </div>
+                            <div class="form-group"><label class="col-sm-2 control-label">邮箱:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control"  data-validation="email" data-validation-error-msg="邮箱格式不正确" value="zhangsan@game2sky.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="alert alert-danger alert-dismissible" role="alert" style="display: none">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10"><input type="submit" value="保存" class="btn btn-success" id="aaa"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
+<script type="application/javascript">
+    require(["http://gwcdn.sail2world.com/bi/2019/js/config.js"], function(){
+        require(['http://gwcdn.sail2world.com/bi/2019/js/minejs/U_user.js']);
+    });
+</script>
+
+

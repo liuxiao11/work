@@ -1,0 +1,107 @@
+<div class="modal-header">
+    <h4 class="modal-title" style="display: inline-block">新建目标</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+    <div class="detailCon">
+        <div class="detail-indentation">
+            <form  class="form-inline" id="userForm" >
+                <div class="form-group formIn">
+                    <label>目标类型</label>
+                    <select class="form-control">
+                        <option>个人</option>
+                        <option>部门</option>
+                        <option>公司</option>
+                    </select>
+                </div>
+                <div class="form-group formIn">
+                    <label>目标周期</label>
+                    <select class="form-control" id="targetPeriod">
+                        <option value="1" weight="60">2019Q2</option>
+                        <option value="2" weight="50">2019Q2</option>
+                        <option value="3" weight="20">2019Q2</option>
+                    </select>
+                </div>
+                <div class="form-group formIn">
+                    <label for="exampleInputEmail2">目标名称</label>
+                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="目标名称"  data-validation="length" data-validation-length="2-30" data-validation-error-msg="目标名称在2-30字符之间">
+                </div>
+                <div class="form-group formIn">
+                    <label for="exampleInputEmail">目标权重</label>
+                    <input type="text" class="form-control" id="exampleInputEmail" style="width: 60px !important;" data-validation="number" data-validation-allowing="range[0;60]" data-validation-error-msg="目标权重在0-60"> %（最大可分配<em id="num">60</em>%）
+                </div>
+                <div class="form-group" >
+                    <label for="exampleInputEmail">负责人</label>
+                    <select data-placeholder="请输入选择" multiple class="chosen-select" id="chosen-select">
+                        <option value="1">等等</option>
+                        <option value="2">安安</option>
+                    </select>
+                </div>
+                <div class="form-group formIn">
+                    <label>可视范围</label>
+                    <select class="form-control">
+                        <option>请选择</option>
+                        <option value="11">公开</option>
+                        <option value="22">部门内可见</option>
+                        <option value="33">仅上下级可见</option>
+                    </select>
+                </div>
+                <div class="form-group formIn">
+                    <label>关键结果</label>
+                    <div class="keyResult">
+                        <div class="keyRes">
+                            <textarea class="form-control" rows="3" style="width:100%;max-width: 100%" placeholder="输入可量化关键结果指标和截至时间。"></textarea>
+                            <a href="#" class="keyUnit active">是/否</a>
+                            <a href="#" class="keyUnit unit">自定单位</a>
+                            <div class="inputUnit" style="display: none">
+                                <div class="inputUnitCo"><label>单位</label> <input type="text" class="form-control" value="%" id="unit"></div>
+                                <div class="inputUnitCo"><label>起始</label> <input type="text" class="form-control" value="0"><span class="unitSpan">%</span></div>
+                                <div class="inputUnitCo"><label>目标</label> <input type="text" class="form-control" value="100"><span class="unitSpan">%</span></div>
+                            </div>
+                        </div>
+                        <div class="addKey">
+                            <a href="#" id="addKey">+添加关键结果</a>
+                            <span class="pull-right">总权重 70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group formIn">
+                    <label>父目标</label>
+                    <a href="parent-target.html" type="button" class="btn btn-default" id="chosePt"  data-toggle="modal" data-target="#myModal1" style="width: unset;min-width: 88px;">选择</a>
+                </div>
+                <div class="alert alert-danger alert-dismissible" role="alert" style="display: none" id="alertWarning">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> <span id="aaaa">Better check yourself, you're not looking too good.</span>
+                </div>
+                <div>
+                    <input type="submit" class="btn btn-success" id="aa" value="确定">
+                    <a href="" class="close1" data-dismiss="modal">取消</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $.validate({form: '#userForm'});
+    $("#chosen-select").chosen({
+        width:'250px',
+        disable_search_threshold: 5,//少于n项时隐藏搜索框
+        no_results_text: "未找到任何结果",
+        max_shown_results:50,//最多显示条数
+        search_contains: true,//关键字模糊搜索
+    });
+    $(document).on('click','#aa',function () {
+        if($("#targetPeriod option").length === 0){
+            $("#alertWarning").css('display','block');
+            $("#alertWarning").children('span').text('目标周期为空不可提交');
+            return false;
+        }
+    });
+    $('#targetPeriod').change(function () {
+        var weight = $('#targetPeriod option:checked').attr('weight');
+        $('#exampleInputEmail').attr('data-validation-allowing','range[0-'+weight+']');
+        $('#exampleInputEmail').attr('data-validation-error-msg','目标权重在0-'+weight+'');
+        $('#num').text(weight)
+
+    })
+</script>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>进度报告</title>
+
+    <link rel="icon" href="http://gwcdn.sail2world.com/bi/2019/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/radialindicator.css?v=2019062126" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/common.css?v=2019062162" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/target.css?v=2019062162" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .nav-target{
+            float: left;
+            border: none;
+            margin-bottom: 5px;
+        }
+        .nav-target>li>a{
+            color: #555555;
+            border: none;
+            padding: 0;
+        }
+        .nav-target>li.active>a, .nav-target>li.active>a:focus, .nav-target>li.active>a:hover{
+            color: #1ABB9C;
+            border: none;
+            background:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <!-- 公共header -->
+        <div class="header">
+            <div class="header-contain">
+                <a class="logo" href="U_index.html">
+                    <img src="images/u1.png" alt="">
+                </a>
+                <div class="nav">
+                    <ul>
+                        <li><a href="U_index.html" title=""><div class="glyphicon glyphicon-home" aria-hidden="true"></div><p>首页</p></a></li>
+                        <li class="active"><a href="T_target.html" title=""><div class="glyphicon glyphicon-screenshot" aria-hidden="true"></div><p>目标</p></a></li>
+                        <li><a href="C_check.html" title=""><div class="glyphicon glyphicon-stats" aria-hidden="true"></div><p>考核</p></a></li>
+                        <li><a href="M_manage.html" title=""><div class="glyphicon glyphicon-globe" aria-hidden="true"></div><p>管理</p></a></li>
+                        <li><a href="S_set.html" title=""><div class="glyphicon glyphicon-cog" aria-hidden="true"></div><p>设置</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 侧边菜单栏 -->
+        <div class="left-menu">
+            <ul>
+                <li class="menu-title"><a href="T_target.html" title="">目标</a></li>
+                <li class="menulist "><a href="T_target.html" title=""><div class="glyphicon glyphicon-screenshot" aria-hidden="true"></div>我的目标</a></li>
+                <li class="menulist "><a href="T_target-all.html" title=""><div class="glyphicon glyphicon-certificate" aria-hidden="true"></div>全部目标</a></li>
+                <li class="menulist "><a href="T_relation.html" title=""><div class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></div>目标关系树</a></li>
+                <li class="menulist "><a href="T_operation.html" title=""><div class="glyphicon glyphicon-folder-open" aria-hidden="true"></div>运营报告</a></li>
+                <li class="menulist active"><a href="T_speed.html" title=""><div class="glyphicon glyphicon-dashboard" aria-hidden="true"></div>进度报告</a></li>
+                <li class="menulist "><a href="T_score.html" title=""><div class="glyphicon glyphicon-tower" aria-hidden="true"></div>评分管理</a></li>
+                <li class="menulist "><a href="T_scoreReport.html" title=""><div class="glyphicon glyphicon-duplicate" aria-hidden="true"></div>评分报告</a></li>
+                <li class="menulist "><a href="T_period.html" title=""><div class="glyphicon glyphicon-calendar" aria-hidden="true"></div>周期管理</a></li>
+            </ul>
+        </div>
+        <!-- 主体内容 -->
+        <div class="container">
+            <div class="content-topbr">
+                <!--面包屑-->
+                <ul class="breadcrumb">
+                    <li>目标</li>
+                    <li>进度报告</li>
+                </ul>
+                <div class="top-user">
+                    <a href="U_user.html"><div class="glyphicon glyphicon-user" aria-hidden="true"></div>张三</a>
+                    <a href="login.html"><div class="glyphicon glyphicon-log-out" aria-hidden="true"></div>注销</a>
+                </div>
+            </div>
+            <div class="content-main">
+                <div class="mainTRight">
+                    <select name="" id="" class="form-control target-sel pull-right">
+                        <option value="">Q1</option>
+                        <option value="">Q2</option>
+                        <option value="">Q3</option>
+                    </select>
+                </div>
+                <div class="mainConTab">
+                    <ul class="nav nav-tabs nav-target" role="tablist">
+                        <li role="presentation" class="active"><a href="#oper-alls" aria-controls="oper-alls" role="tab" data-toggle="tab">整体</a></li>
+                        <li role="presentation"><a href="#oper-update" aria-controls="oper-update" role="tab" data-toggle="tab">部门</a></li>
+                        <li role="presentation"><a href="#oper-diff" aria-controls="oper-diff" role="tab" data-toggle="tab">个人</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="oper-alls">
+                        <div class="mainAll">
+                            <div class="main1">
+                                <div class="main1top">
+                                    <div class="main1topicon"><div class="mainicon"></div>目标进度整体统计</div>
+                                </div>
+                                <div>
+                                    <table class="table table-bordered" >
+                                        <thead>
+                                        <tr>
+                                            <th>公司级目标</th>
+                                            <th>部门级目标平均进度</th>
+                                            <th>个人级目标平均进度</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="tableLight">45.32%</td>
+                                            <td class="tableLight">55.18%</td>
+                                            <td class="tableLight">64.37%</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="main3">
+                                <div class="main1top">
+                                    <div class="main1topicon"><div class="mainicon"></div>目标进度整体分布</div>
+                                </div>
+                                <div>
+                                    <div class="operation-table">
+                                        <table class="table table-bordered" >
+                                            <thead>
+                                            <tr>
+                                                <th>目标进度</th>
+                                                <th>目标数</th>
+                                                <th>占比</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>0~20%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21~40%</td>
+                                                <td>26</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>41~60%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>61~80%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>81~100%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="operchart" id="operation-container1" style="min-width:300px;height:215px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main3">
+                                <div class="main1top">
+                                    <div class="main1topicon"><div class="mainicon"></div>没有进度（进度为0）的目标统计</div>
+                                </div>
+                                <div>
+                                    <table class="table table-bordered " >
+                                        <thead>
+                                        <tr>
+                                            <th>目标总数</th>
+                                            <th>公司级目标</th>
+                                            <th>部门级目标</th>
+                                            <th>个人级目标</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="tableLight">0</td>
+                                            <td class="tableLight">0</td>
+                                            <td class="tableLight">0</td>
+                                            <td class="tableLight">0</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="oper-update">
+                        <div class="mainUpdate">
+                            <div class="main3">
+                                <div class="main1top">
+                                    <div class="main1topicon"><div class="mainicon"></div>部门目标进度分布</div>
+                                </div>
+                                <div>
+                                    <div class="operation-table">
+                                        <table class="table table-bordered" >
+                                            <thead>
+                                            <tr>
+                                                <th>目标进度</th>
+                                                <th>目标数</th>
+                                                <th>占比</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>0~20%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21~40%</td>
+                                                <td>26</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>41~60%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>61~80%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>81~100%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="operchart" id="operation-container3" style="min-width:300px;height:215px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main3">
+                                <div class="main1top">
+                                    <div class="main1topicon"><div class="mainicon"></div>部门目标进度明细</div>
+                                </div>
+                                <div>
+                                    <table class="table table-bordered " >
+                                        <thead>
+                                        <tr>
+                                            <th>部门</th>
+                                            <th>主管</th>
+                                            <th>目标数</th>
+                                            <th>完成度</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>技术部</td>
+                                            <td>张三</td>
+                                            <td class="tableLight">12</td>
+                                            <td class="tableLight">27.14%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>技术部</td>
+                                            <td>张三</td>
+                                            <td class="tableLight">12</td>
+                                            <td class="tableLight">27.14%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>技术部</td>
+                                            <td>张三</td>
+                                            <td class="tableLight">12</td>
+                                            <td class="tableLight">27.14%</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="oper-diff">
+                        <div class="mainDiff">
+                            <div class="main3">
+                                <div class="main1top">
+                                    <div class="main1topicon"><div class="mainicon"></div>个人目标进度分布</div>
+                                </div>
+                                <div>
+                                    <div class="operation-table">
+                                        <table class="table table-bordered" >
+                                            <thead>
+                                            <tr>
+                                                <th>目标进度</th>
+                                                <th>目标数</th>
+                                                <th>占比</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>0~20%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21~40%</td>
+                                                <td>26</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>41~60%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>61~80%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>81~100%</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="operchart" id="operation-container4" style="min-width:300px;height:215px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main3">
+                                <div class="main1top">
+                                    <div class="main1topicon"><div class="mainicon"></div>个人目标进度明细</div>
+                                </div>
+                                <div>
+                                    <table class="table table-bordered " >
+                                        <thead>
+                                        <tr>
+                                            <th>部门</th>
+                                            <th>岗位</th>
+                                            <th>目标数</th>
+                                            <th>完成度</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>技术部</td>
+                                            <td>技术</td>
+                                            <td class="tableLight">12</td>
+                                            <td class="tableLight">27.14%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>技术部</td>
+                                            <td>技术</td>
+                                            <td class="tableLight">12</td>
+                                            <td class="tableLight">27.14%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>技术部</td>
+                                            <td>技术</td>
+                                            <td class="tableLight">12</td>
+                                            <td class="tableLight">27.14%</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="application/javascript" src="http://gwcdn.sail2world.com/bi/2019/js/lib/highcharts.js"></script>
+<script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
+<script type="application/javascript">
+    require(["http://gwcdn.sail2world.com/bi/2019/js/config.js"], function(){
+        require(['http://gwcdn.sail2world.com/bi/2019/js/minejs/T_speed.js']);
+    });
+</script>
+
+
+

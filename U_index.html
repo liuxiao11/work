@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>首页</title>
+
+    <link rel="icon" href="http://gwcdn.sail2world.com/bi/2019/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/radialindicator.css?v=2019062126" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/common.css?v=2019062162" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .main1ms ul li span{margin-right: 5px;}
+        .main1ms ul li a{color: #999999;}
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <!-- 公共header -->
+        <div class="header">
+            <div class="header-contain">
+                <a class="logo" href="U_index.html">
+                    <img src="images/u1.png" alt="">
+                </a>
+                <div class="nav">
+                    <ul>
+                        <li class="active">
+                            <a href="U_index.html" title="">
+                                <div class="glyphicon glyphicon-home" aria-hidden="true"></div>
+                                <p>首页</p>
+                            </a>
+                        </li>
+                        <li><a href="T_target.html" title=""><div class="glyphicon glyphicon-screenshot" aria-hidden="true"></div><p>目标</p></a></li>
+                        <li><a href="C_check.html" title=""><div class="glyphicon glyphicon-stats" aria-hidden="true"></div><p>考核</p></a></li>
+                        <li><a href="M_manage.html" title=""><div class="glyphicon glyphicon-globe" aria-hidden="true"></div><p>管理</p></a></li>
+                        <li><a href="S_set.html" title=""><div class="glyphicon glyphicon-cog" aria-hidden="true"></div><p>设置</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 侧边菜单栏 -->
+        <div class="left-menu">
+            <ul>
+                <li class="menu-title"><a href="U_index.html" title="">我的</a></li>
+                <li class="menulist active"><a href="U_index.html" title=""><div class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></div>仪表盘</a></li>
+                <li class="menulist "><a href="U_user.html" title=""><div class="glyphicon glyphicon-user" aria-hidden="true"></div>个人信息</a></li>
+                <li class="menulist "><a href="U_preference.html" title=""><div class="glyphicon glyphicon-cog" aria-hidden="true"></div>偏好设置</a></li>
+                <li class="menulist "><a href="login.html" title=""><div class="glyphicon glyphicon-log-out" aria-hidden="true"></div>注销</a></li>
+            </ul>
+        </div>
+        <!-- 主体内容 -->
+        <div class="container">
+            <div class="content-topbr">
+                <!--面包屑-->
+                <ul class="breadcrumb">
+                    <li>我的</li>
+                    <li>仪表盘</li>
+                </ul>
+                <div class="top-user">
+                    <a href="U_user.html"><div class="glyphicon glyphicon-user" aria-hidden="true"></div>张三</a>
+                    <a href="login.html"><div class="glyphicon glyphicon-log-out" aria-hidden="true"></div>注销</a>
+                </div>
+            </div>
+            <div class="content-main">
+                <div class="main1">
+                    <div class="main1top">
+                        <div class="mainicon"></div>消息提醒
+                    </div>
+                    <div class="main1ms">
+                        <ul>
+                            <li><span>[2019-06-22]</span>请尽快完成本月OKR制定。<a href="" title="">[前往处理]</a></li>
+                            <li><span>[2019-06-22]</span>请尽快完成本月OKR制定。<a href="" title="">[前往处理]</a></li>
+                            <li><span>[2019-06-22]</span>请尽快完成本月OKR制定。<a href="" title="">[前往处理]</a></li>
+                            <li><span>[2019-06-22]</span>请尽快完成本月OKR制定。<a href="" title="">[前往处理]</a></li>
+                            <li><span>[2019-06-22]</span>请尽快完成本月OKR制定。<a href="" title="">[前往处理]</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main1">
+                    <div class="main1top">
+                        <div class="mainicon"></div>目标进度
+                    </div>
+                    <div id="intro">
+                        <div class="prg-cont rad-prg col-md-4" id="indicatorContainer4"><p>我的</p></div>
+                        <div class="prg-cont rad-prg col-md-4 " id="indicatorContainer5"><p>部门</p></div>
+                        <div class="prg-cont rad-prg col-md-4 " id="indicatorContainer6"><p>公司</p></div>
+                    </div>
+                </div>
+                <div class="main3">
+                    <div class="main1top">
+                        <div class="mainicon"></div>近期考核成绩
+                        <a href="" class="pull-right">查看更多</a>
+                    </div>
+                    <div>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>考核周期</th>
+                                    <th>业绩</th>
+                                    <th>团队精神</th>
+                                    <th>勤奋正直</th>
+                                    <th>协作精神</th>
+                                    <th>综合成绩</th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2019Q1</td>
+                                    <td>A</td>
+                                    <td>B+</td>
+                                    <td>A</td>
+                                    <td>B+</td>
+                                    <td class="tableLight">A</td>
+                                </tr>
+                                 <tr>
+                                    <td>2019Q1</td>
+                                     <td>A</td>
+                                     <td>B+</td>
+                                     <td>A</td>
+                                     <td>B+</td>
+                                     <td class="tableLight">A</td>
+                                </tr>
+                                <tr>
+                                    <td>2019Q1</td>
+                                    <td>A</td>
+                                    <td>B+</td>
+                                    <td>A</td>
+                                    <td>B+</td>
+                                    <td class="tableLight">A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
+<script type="application/javascript">
+    require(["http://gwcdn.sail2world.com/bi/2019/js/config.js"], function(){
+        require(['http://gwcdn.sail2world.com/bi/2019/js/minejs/index.js']);
+    });
+</script>
+

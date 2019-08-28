@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>我的考核</title>
+
+    <link rel="icon" href="http://gwcdn.sail2world.com/bi/2019/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/common.css?v=2019062162" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/check.css?v=2019062126" rel="stylesheet">
+    
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <!-- 公共header -->
+        <div class="header">
+            <div class="header-contain">
+                <a class="logo" href="U_index.html">
+                    <img src="images/u1.png" alt="">
+                </a>
+                <div class="nav">
+                    <ul>
+                        <li><a href="U_index.html" title=""><div class="glyphicon glyphicon-home" aria-hidden="true"></div><p>首页</p></a></li>
+                        <li><a href="T_target.html" title=""><div class="glyphicon glyphicon-screenshot" aria-hidden="true"></div><p>目标</p></a></li>
+                        <li class="active"><a href="C_check.html" title=""><div class="glyphicon glyphicon-stats" aria-hidden="true"></div><p>考核</p></a></li>
+                        <li><a href="M_manage.html" title=""><div class="glyphicon glyphicon-globe" aria-hidden="true"></div><p>管理</p></a></li>
+                        <li><a href="S_set.html" title=""><div class="glyphicon glyphicon-cog" aria-hidden="true"></div><p>设置</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 侧边菜单栏 -->
+        <div class="left-menu">
+            <ul>
+                <li class="menu-title"><a href="C_check.html" title="">考核</a></li>
+                <li class="menulist active"><a href="C_check.html" title=""><div class="glyphicon glyphicon-ok-sign" aria-hidden="true"></div>我的考核</a></li>
+                <li class="menulist "><a href="C_assess.html" title=""><div class="glyphicon glyphicon-edit" aria-hidden="true"></div>我评价的</a></li>
+                <li class="menulist "><a href="C_approve.html" title=""><div class="glyphicon glyphicon-pawn" aria-hidden="true"></div>我审批的</a></li>
+                <li class="menulist "><a href="C_score.html" title=""><div class="glyphicon glyphicon-hourglass" aria-hidden="true"></div>考核成绩</a></li>
+                <li class="menulist "><a href="C_analyse.html" title=""><div class="glyphicon glyphicon-dashboard" aria-hidden="true"></div>考核分析</a></li>
+                <li class="menulist "><a href="C_statistics.html" title=""><div class="glyphicon glyphicon-tower" aria-hidden="true"></div>统计分析</a></li>
+                <li class="menulist "><a href="C_manage.html" title=""><div class="glyphicon glyphicon-cog" aria-hidden="true"></div>考核管理</a></li>
+                <li class="menulist "><a href="C_index.html" title=""><div class="glyphicon glyphicon-list-alt" aria-hidden="true"></div>指标管理</a></li>
+                <li class="menulist "><a href="C_formwork.html" title=""><div class="glyphicon glyphicon-th" aria-hidden="true"></div>模板管理</a></li>
+            </ul>
+        </div>
+        <!-- 主体内容 -->
+        <div class="container">
+            <div class="content-topbr">
+                <!--面包屑-->
+                <ul class="breadcrumb">
+                    <li>考核</li>
+                    <li>我的考核</li>
+                </ul>
+                <div class="top-user">
+                    <div class="top-user">
+                        <a href="U_user.html"><div class="glyphicon glyphicon-user" aria-hidden="true"></div>张三</a>
+                        <a href="login.html"><div class="glyphicon glyphicon-log-out" aria-hidden="true"></div>注销</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-main">
+                <div class="main1">
+                    <div class="main1top">
+                        <div class="main1topicon"><div class="mainicon"></div>我的考核</div>
+                    </div>
+                    <div>
+                        <div class="search-tab">
+                            <input type="text" class="form-control search" id="search" placeholder="搜索负责人/目标名称">
+                        </div>
+                        <table class="table table-bordered " >
+                            <thead>
+                            <tr>
+                            <tr>
+                                <th>考核名称</th>
+                                <th>类型</th>
+                                <th>创建人</th>
+                                <th>结束时间</th>
+                                <th>状态</th>
+                                <th>考核成绩</th>
+                                <th>操作</th>
+                            </tr>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2019Q1</td>
+                                <td>个人</td>
+                                <td>张三</td>
+                                <td>2019-6-30</td>
+                                <td>已结束</td>
+                                <td>B+</td>
+                                <td><a href="#" class="tag-detail" data-toggle="modal" data-target="#myModal">查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>2019Q1</td>
+                                <td>个人</td>
+                                <td>张三</td>
+                                <td>2019-6-30</td>
+                                <td>已结束</td>
+                                <td>B+</td>
+                                <td><a href="#" class="tag-detail" data-toggle="modal" data-target="#myModal">查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>2019Q1</td>
+                                <td>个人</td>
+                                <td>张三</td>
+                                <td>2019-6-30</td>
+                                <td>已结束</td>
+                                <td>B+</td>
+                                <td><a href="#" class="tag-detail"  data-toggle="modal" data-target="#myModal">查看</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--考核查看-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">考核详情</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-check">
+                        <p><span>结果导向：</span>B+</p>
+                        <p><span>团队精神：</span>B+</p>
+                        <p><span>勤奋正直：</span>B+</p>
+                        <p><span>协作精神：</span>B+</p>
+                        <p><span>原因：</span>这一段关于评价原因的描述。</p>
+                    </div>
+                    <div style="padding: 10px">
+                        总成绩：<span class="tableLight">B+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
+<script type="application/javascript">
+    require(["http://gwcdn.sail2world.com/bi/2019/js/config.js"], function(){
+        require(['common'],function (commonJs) {
+            $('#search').bind('keypress', function (event) {
+                if (event.keyCode == "13") {
+                    var search = $('#search').val();
+                    alert("回车搜索"+search)
+                }
+            })
+        });
+    });
+</script>

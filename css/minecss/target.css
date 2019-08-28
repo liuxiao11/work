@@ -1,0 +1,259 @@
+/*operation*/
+.main1top .maintoptab{float: right;display: inline-block;}
+.main1top .maintoptab ul li{font-weight: normal;float: left;padding: 0 20px;border-right: 1px solid #9d9d9d;}
+.main1top .maintoptab ul li:last-child{border-right: none;}
+.main1top .maintoptab ul .active a{color: #1ABB9C;}
+/*relation*/
+.mainselect{margin: 15px;}
+.mian-btn{display: inline-block;float: right;margin-right: 20px;}
+.main-relation{display: block;margin-bottom: 20px}
+table,th,td{border: none;color: #000000;}
+.relation-span{float: right;}
+.orgchart { background: #f5f5f5; }
+
+
+.mainConTab{
+    height: 30px;
+    display: block;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 20px;
+}
+.mainConTab ul li{
+    float: left;
+    padding: 0 25px 6px 25px;
+}
+.mainConTab ul li a{
+    color: #333333;
+}
+.mainConTab ul .active a{
+    color: #1ABB9C;
+}
+.mainConTab ul .active{
+    border-bottom: 3px solid #1ABB9C;
+}
+.maintab{
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.maintab .maintaba{
+    color: #333333;
+}
+.maintab .active{
+    color: #1ABB9C;
+}
+.main1top .main1topicon{
+    float: left;
+}
+.main1top .excel{
+    float: right;
+    height: 22px;
+    font-size: 12px;
+    padding: 2px 20px;
+    margin-right: 5px;
+    background-color: rgba(26, 187, 156, 1);
+}
+
+/*目标查看弹窗*/
+.headerIcon{
+    float: right;
+    display: inline-block;
+    margin-right: 20px;
+}
+.headerIcon .glyphicon{
+    margin-right: 10px;
+}
+.detailCon .glyphicon{
+    margin-right: 10px;
+}
+.glyphicon-check{
+    padding-right: 15px;
+    border-right: 1px solid slategray;
+}
+.detailCon{
+    padding: 0 10px 10px;
+}
+.detail-indentation{
+    margin: 10px 24px;
+    color: #9d9d9d;
+}
+.small{
+    margin-right: 50px;
+}
+.detail-progress{
+    margin-top: 10px;
+    width: 90%;
+}
+.rad-prg{
+    margin: 0;
+}
+.detail-key{
+    display: inline-block;
+    margin-left: 10px;
+}
+.detail-key label{
+    margin-right: 20px;
+}
+.detailP{
+    color: #333333;
+}
+.detailInputSmall{
+    width: 80px !important;
+    display: inline-block;
+}
+.form-group{
+    margin-right: 70px;
+}
+.radio label{
+    display: block;
+}
+.radio #optionsRadios1{
+    color: green;
+}
+.detail-state{
+    display: inline-block;
+    margin-right: 20px;
+}
+.progress-bar{
+    color: #ffffff;
+}
+.keyRes{
+    min-height: 88px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #9d9d9d;
+}
+.joinIn{
+    min-height: 50px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #9d9d9d;
+}
+.joinInA{
+    min-height: 200px;
+}
+.joinInA a{
+    margin-right: 20px;
+    color: #9d9d9d;;
+}
+.joinInA .active{
+    color: #1ABB9C;
+}
+.joinInComm{
+    margin: 10px 20px;
+    border-bottom: 1px dashed #9d9d9d;
+}
+h5{
+    font-weight: bold;
+    color: #333333;
+}
+.joinInComm small{
+    margin-left: 20px;
+}
+.joinHistory{
+    min-height: 120px;
+    margin: 10px 20px;
+}
+.joinHis{
+    width: 100%;
+    display: inline-block;
+}
+.joinHisKey{
+    margin-left: 20px;
+    color: #333333;
+}
+.hisLight{
+    color: #1ABB9C;
+}
+.hisGr{
+    color: #9d9d9d;
+}
+.joinActive{
+    width: 95%;
+    min-height: 120px;
+    margin: 10px 20px;
+}
+.joinAct{
+    width: 95%;
+    display: inline-block;
+}
+.actBlac{
+    color: #333333;
+    margin-right: 20px;
+}
+.hisGrs{
+    width: 93%;
+    color: #9d9d9d;
+}
+
+.formIn{
+    padding: 10px 0;
+}
+.formIn input{
+    width: 250px !important;
+    display: inline-block;
+}
+.formIn select{
+    width: 250px !important;
+    display: inline-block;
+}
+.bootstrap-select{
+    width: 250px !important;
+    margin-left: 14px !important;
+}
+/*屏幕宽度大于992时*/
+@media screen and (min-width: 992px) {
+    .keyResult {
+        width: 800px;
+    }
+}
+/*屏幕宽度大于768小于992*/
+@media screen and (max-width: 992px) and (min-width: 768px){
+    .keyResult {
+        width: 656px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .keyResult {
+        width: 630px;
+    }
+}
+.keyResult{
+    min-height: 170px;
+    padding: 10px 10px 30px;
+    background-color: rgba(242, 242, 242, 1);
+}
+.keyUnit{
+    display: inline-block;
+    padding: 2px 20px;
+    margin-top: 10px;
+    border: 1px solid #9d9d9d;
+    border-radius: 8px;
+    color: #333333;
+}
+.keyRes .active{
+    border: 1px solid #1ABB9C;
+    color: #1ABB9C;
+}
+.inputUnit{
+    display: inline-block;
+    margin-left: 30px;
+}
+.inputUnit input{
+    width: 68px !important;
+}
+.inputUnit label{
+    margin-left: 30px;
+}
+.btn{
+    width: 88px;
+}
+.addKey{
+    margin-top: 10px;
+}
+.addKey a{
+    display: inline-block;
+    color: #1ABB9C;
+}
+.modalInput input,select{
+    width: 200px;
+}

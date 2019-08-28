@@ -1,0 +1,46 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">选择父目标</h4>
+</div>
+<div class="modal-body">
+    <form action="" class="form-inline">
+        <div class="modalInput" style="margin-left: 15px">
+            <input type="text" name="txt_departmentname" class="form-control" id="txt_departmentname" placeholder="输入目标名称搜索">
+            <select class="form-control">
+                <option>个人</option>
+                <option>部门</option>
+                <option>公司</option>
+            </select>
+        </div>
+        <div class="">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>选择</th>
+                    <th>目标</th>
+                    <th>负责人</th>
+                    <th>类型</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="radio" name="father_select_raido" checked="checked"></td>
+                    <td>目标11111111111111</td>
+                    <td>李四</td>
+                    <td>个人</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="father_select_raido"></td>
+                    <td>目标2</td>
+                    <td>张三</td>
+                    <td>个人</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+    <button type="button" id="parent-targ" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+</div>

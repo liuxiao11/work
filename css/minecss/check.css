@@ -1,0 +1,79 @@
+.modal-check{
+    padding: 10px;
+    border-bottom: 1px dashed #9d9d9d;
+}
+.modal-check1{
+    padding: 0 15px ;
+}
+.joinInA{
+    padding: 10px;
+}
+.joinInA a{
+    margin-right: 20px;
+    color: #9d9d9d;;
+}
+.joinInA a span{
+    margin-right: 10px;
+}
+.joinInA .active{
+    color: #1ABB9C;
+}
+.joinInComm{
+    margin: 10px 20px;
+    border-bottom: 1px dashed #9d9d9d;
+}
+h5{
+    font-weight: bold;
+    color: #333333;
+}
+.joinInComm small{
+    margin-left: 20px;
+}
+.joinHistory{
+    min-height: 120px;
+    margin: 10px 20px;
+}
+.joinHis{
+    width: 100%;
+    display: inline-block;
+}
+.joinHisKey{
+    margin-left: 20px;
+    color: #333333;
+}
+.hisLight{
+    color: #1ABB9C;
+}
+.hisGr{
+    color: #9d9d9d;
+}
+.mainConTab{
+    height: 30px;
+    display: block;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 20px;
+}
+.mainConTab ul li{
+    float: left;
+    padding: 0 25px 6px 25px;
+}
+.mainConTab ul li a{
+    color: #333333;
+}
+.mainConTab ul .active a{
+    color: #1ABB9C;
+}
+.mainConTab ul .active{
+    border-bottom: 3px solid #1ABB9C;
+}
+.main1top .maintoptab{
+    float: right;
+    display: inline-block;
+}
+.main1topicon{
+    display: inline-block;
+}
+.main1top .maintoptab a{
+    display: inline-block;
+    margin-right: 10px;
+}

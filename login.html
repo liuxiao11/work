@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>登录页</title>
+
+    <link rel="icon" href="http://gwcdn.sail2world.com/bi/2019/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/login.css?v=2019062127" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .collogin {
+            text-align:center;
+        }
+        .collogin p{
+            margin-top: 20px;
+        }
+        .nav-login>li>a{
+            color: #555555;
+        }
+        .nav-login>li.active>a, .nav-login>li.active>a:focus, .nav-login>li.active>a:hover{
+            color: #337ab7;
+            background-color: #eee;
+        }
+        .input-group{
+            margin-bottom: 25px;
+        }
+        .input-group .form-error{
+            position: absolute;
+            margin-top: 37px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <!-- 公共header -->
+        <div class="header">
+            <div class="header-box">
+                <div class="row row-centered">
+                    <img src="images/u1.png" alt="" >
+                </div>
+            </div>
+        </div>
+        <!-- 主体内容 -->
+        <div class="container">
+            <div class="jumbotron col-md-8">
+                <h1>Welcome~</h1>
+                <p>欢迎进入单点登录系统</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+            <div class="col-md-4 collogin">
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-login" role="tablist">
+                        <li role="presentation" class="active"><a href="#scan" aria-controls="scan" role="tab" data-toggle="tab">钉钉扫码</a></li>
+                        <li role="presentation"><a href="#phone" aria-controls="phone" role="tab" data-toggle="tab">手机验证</a></li>
+                        <li role="presentation"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">账号登录</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="padding: 20px">
+                        <div role="tabpanel" class="tab-pane active" id="scan">
+                            <img src="images/u5.png" alt="">
+                            <p>请使用钉钉扫码登录</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="phone">
+                            <form action="" id="userForm">
+                                <div class="input-group">
+                                    <span class="input-group-addon upaddon"><i class="glyphicon glyphicon-phone"></i></span>
+                                    <input type="text" class="form-control" id="tel" placeholder="手机号码" data-validation="custom" data-validation-regexp="^1[345789]\d{9}$" data-validation-error-msg="手机号格式不正确">
+                                </div>
+                                <div class="input-group">
+                                    <a href="#" role="button" class="btn btn-primary pull-right">获取短信验证码</a>
+                                    <input type="text" id="code" class="form-control" placeholder="短信验证码" style="width: 99px;margin-right: 20px" data-validation="required" data-validation-error-msg="请输入验证码">
+                                </div>
+                                <div class="input-group">
+                                    <input type="checkbox" > 记住我
+                                </div>
+                                <input type="submit" class="btn btn-success btn-block" value="登录" style="margin-top: 20px">
+                            </form>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="account">
+                            <form action="" class="form" id="userForm1">
+                                <div class="input-group">
+                                    <span class="input-group-addon upaddon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input type="text" class="form-control"  placeholder="请输入账号" data-validation="required" data-validation-error-msg="请输入账号" >
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon upaddon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input type="text" class="form-control"  placeholder="请输入密码" data-validation="required" data-validation-error-msg="请输入密码">
+                                </div>
+                                <div class="input-group">
+                                    <input type="checkbox" > 记住我
+                                </div>
+                                <input type="submit" class="btn btn-success btn-block" value="登录" style="margin-top: 20px">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
+<script type="application/javascript">
+    require(["http://gwcdn.sail2world.com/bi/2019/js/config.js"], function(){
+        require(['http://gwcdn.sail2world.com/bi/2019/js/minejs/login.js']);
+    });
+</script>
+
