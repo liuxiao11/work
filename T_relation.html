@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="http://gwcdn.sail2world.com/bi/2019/css/style.css?v=2019062126">
 <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/common.css?v=2019062162" rel="stylesheet">
 <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/target.css?v=2019062162" rel="stylesheet">
+    <link href="http://gwcdn.sail2world.com/bi/2019/css/chosen.css" rel="stylesheet">
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
@@ -32,6 +33,18 @@
             left: 10px;
             overflow: auto;
             text-align: center;
+        }
+        .joinInA .active{
+            color: #9d9d9d;
+        }
+        .joinInA>.nav>.active>a, .joinInA>.nav>.active>a:focus, .joinInA>.nav>.active>a:hover{
+            color: #1ABB9C;
+            border: none;
+            background-color: #f5f5f5;
+        }
+        .inputUnitCo{
+            display: inline-block;
+            margin: 5px;
         }
     </style>
 </head>
@@ -110,11 +123,20 @@
             </div>
         </div>
     </div>
+
+    <!--目标查看弹窗-->
+    <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document" style="min-width: 768px">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
 <script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
 <script type="application/javascript">
-    require(["http://gwcdn.sail2world.com/bi/2019/js/config.js"], function(){
+    require(["js/config.js"], function(){
         require(['js/minejs/T_relation.js']);
     });
 </script>

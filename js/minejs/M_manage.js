@@ -8,6 +8,7 @@ define(['common','toastr','validator'],function(commonJs,toastr){
     });
     /*同步组织架构*/
     $('#sync-manage').click(function () {
+        toastr.remove();
         toastr.success('数据同步成功');
         // toastr.error('Error');
     });

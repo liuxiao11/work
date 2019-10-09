@@ -14,6 +14,7 @@
     <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/common.css?v=2019062162" rel="stylesheet">
     <link href="http://gwcdn.sail2world.com/bi/2019/css/minecss/check.css?v=2019062126" rel="stylesheet">
     <link href="http://gwcdn.sail2world.com/bi/2019/css/chosen.css?v=201962162" rel="stylesheet">
+    <link rel="stylesheet" href="http://gwcdn.sail2world.com/bi/2019/css/ystep.css?v=201962165">
 
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
@@ -25,6 +26,39 @@
     <style>
         .chosen-container{
             margin-left: 0;
+        }
+        .steps{
+            width: 100%;
+        }
+        .ystep1{
+            width: 77%;
+            min-height: 65px;
+            margin: 0 auto;
+        }
+        .ys-tips ul{
+            width: 87%;
+            min-height: 150px;
+            overflow: auto;
+            zoom: 1;
+            margin: 0 auto;
+        }
+        .ys-tips ul .ys-tip{
+            width: 110px;
+            float: left;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        .ys-tip:not(:first-child){
+            margin-left: 13px;
+        }
+        .ystep-container{
+            width: 100% !important;
+        }
+        .ystep-progress,.ystep-progress-bar{
+            width: 93% !important;
+        }
+        .ystep-container-steps>li:last-child{
+            width: auto;
         }
     </style>
 </head>
@@ -107,7 +141,11 @@
                                 <td>个人</td>
                                 <td>2019-04-22</td>
                                 <td>2019-07-01</td>
-                                <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">查看</a><a href="#" data-toggle="modal" data-target="#myModalDel">删除</a></td>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">查看</a>
+                                    <a href="#" data-toggle="modal" data-target="#myModalDel">删除</a>
+                                    <a href="#" data-toggle="modal" data-target="#myModalProgress">进度</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2019Q2</td>
@@ -115,7 +153,11 @@
                                 <td>个人</td>
                                 <td>2019-04-22</td>
                                 <td>2019-07-01</td>
-                                <td><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">查看</a><a href="#" data-toggle="modal" data-target="#myModalDel">删除</a></td>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">查看</a>
+                                    <a href="#" data-toggle="modal" data-target="#myModalDel">删除</a>
+                                    <a href="#" data-toggle="modal" data-target="#myModalProgress">进度</a>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -269,11 +311,96 @@
             </div>
         </div>
     </div>
+    <!--进度-->
+    <div class="modal fade" id="myModalProgress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" >2019Q2</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info" role="alert">日期：2019-09-02 20:06 - 2019-09-28 23:06</div>
+                    <div class="steps">
+                        <div class="ystep1"></div>
+                        <div class="ys-tips">
+                            <ul>
+                                <li class="ys-tip">
+                                    <div class="ys-con"><div class="arrow"></div><h3 class="popover-title">开始</h3>
+                                        <div class="popover-content">
+                                            <p>张三:已创建:B</p>
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ys-tip">
+                                    <div class="ys-con"><div class="arrow"></div><h3 class="popover-title">评价中</h3>
+                                        <div class="popover-content">
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ys-tip">
+                                    <div class="ys-con"><div class="arrow"></div><h3 class="popover-title">审核中</h3>
+                                        <div class="popover-content">
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ys-tip">
+                                    <div class="ys-con"><div class="arrow"></div><h3 class="popover-title">已完成</h3>
+                                        <div class="popover-content">
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                            <p>张三 已创建</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 <script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
 <script type="application/javascript">
     require(["js/config.js"], function(){
-        require(['js/minejs/C_manage.js']);
+        require(['js/minejs/C_manage.js','ystep'],function () {
+            //loadStep 方法可以初始化ystep
+            $(".ystep1").loadStep({
+                //ystep的外观大小
+                //可选值：small,large
+                size: "large",
+                //ystep配色方案
+                //可选值：green,blue
+                color: "blue",
+                //ystep中包含的步骤
+                steps: [{
+                    //步骤名称
+                    title: "开始",
+                },{
+                    title: "评价中",
+                },{
+                    title: "审核中",
+                },{
+                    title: "已完成",
+                }]
+            });
+            $('#myModalProgress').on('shown.bs.modal',function () {
+                //获取当前在第几步
+                console.log($(".ystep1").getStep());
+            });
+            //跳转到指定步骤
+            $(".ystep1").setStep(3);
+        });
     });
 </script>

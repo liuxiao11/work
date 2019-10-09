@@ -52,6 +52,24 @@
             display: inline-block;
             margin: 5px;
         }
+        .modal-target{
+            cursor: pointer;/*改变鼠标指针光标样式 为小手*/
+        }
+        .joinIn>.bootstrap-select{
+            width: 98% !important;
+        }
+        .target-sel{
+            width: 200px;
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        }
+        mark{
+            color: red;
+            font-size: 18px;
+            font-weight: bold
+        }
     </style>
 </head>
 <body>
@@ -99,16 +117,25 @@
                     <a href="U_user.html"><div class="glyphicon glyphicon-user" aria-hidden="true"></div>张三</a>
                     <a href="login.html"><div class="glyphicon glyphicon-log-out" aria-hidden="true"></div>注销</a>
                 </div>
+                <div>
+                    <mark>周期选择：</mark>
+                    <select name="" id="" class="form-control target-sel">
+                        <option value="2019Q1">2019Q1</option>
+                        <option value="2019Q2">2019Q2</option>
+                        <option value="2019Q3">2019Q3</option>
+                    </select>
+                </div>
             </div>
             <div class="content-main">
                 <div class="mainTRight">
+<!--                    <mark>周期选择：</mark>-->
+<!--                    <select name="" id="" class="form-control target-sel">-->
+<!--                        <option value="2019Q1">2019Q1</option>-->
+<!--                        <option value="2019Q2">2019Q2</option>-->
+<!--                        <option value="2019Q3">2019Q3</option>-->
+<!--                    </select>-->
                     <div class="pull-right">
-                        <a href="add-target.html" class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">+新建目标</a>
-                        <select name="" id="" class="form-control target-sel">
-                            <option value="2019Q1">2019Q1</option>
-                            <option value="2019Q2">2019Q2</option>
-                            <option value="2019Q3">2019Q3</option>
-                        </select>
+                        <a id="addTarget" class="btn btn-success" >+新建目标</a>
                     </div>
                 </div>
                 <div class="main1">
@@ -153,7 +180,7 @@
                                         <td>2019-04-22</td>
                                         <td>个人</td>
                                         <td>30%</td>
-                                        <td><a href="target-modal.html" data-toggle="modal" data-target="#myModal" class="modal-target">查看</a></td>
+                                        <td><a  class="modal-target">查看</a></td>
                                     </tr>
                                     <tr>
                                         <td>张三</td>
@@ -161,7 +188,7 @@
                                         <td>2019-04-22</td>
                                         <td>个人</td>
                                         <td>30%</td>
-                                        <td><a  href="target-modal.html" data-toggle="modal" data-target="#myModal">查看</a></td>
+                                        <td><a  class="modal-target">查看</a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -282,14 +309,23 @@
             $('#myModal').on('hidden.bs.modal', function (e) {
                 $(this).removeData('bs.modal');
                 $(this).find('.modal-content').children().remove();
+                // window.location.reload();
+            });
+            $('#addTarget').click(function () {
+                $('#myModalAdd').modal({
+                    remote:"./add-target.html"
+                });
+            });
+            $('.modal-target').click(function () {
+                $('#myModal').modal({
+                    remote:"./target-modal.html"
+                });
             });
             $(function () {
-                console.log(11)
                 commonJs.radialobj('#indicatorContainer4',10);
                 commonJs.radialobj('#indicatorContainer5',30);
                 commonJs.radialobj('#indicatorContainer6',80);
             });
-
         });
     });
 </script>

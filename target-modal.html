@@ -85,7 +85,15 @@
         <p><span class="glyphicon glyphicon-user"></span>参与者</p>
         <div class="detail-indentation">
             <div class="joinIn">
-                <select data-placeholder="请输入选择" multiple class="chosen-select" id="chosen-select-join"></select>
+<!--                <select data-placeholder="请输入选择" multiple class="chosen-select" id="chosen-select-join"></select>-->
+                <select  id="main_user" name="main_user" data-placeholder="请输入选择"
+                         class="selectpicker show-tick form-control" multiple data-size="10"
+                        data-live-search="true" data-validation="selectRequire">
+                    <option>1111</option>
+                    <option>22222</option>
+                    <option>li33333siss</option>
+                    <option>dssasaa</option>
+                </select>
             </div>
             <div class="joinInA">
                 <ul class="nav nav-tabs" role="tablist">
@@ -166,7 +174,7 @@
 <script type="application/javascript" src="http://webcdn.sail2world.com/dmc/static/js-build/require.js"></script>
 <script type="application/javascript">
     require(["http://gwcdn.sail2world.com/bi/2019/js/config.js?v=2626231106"], function(){
-        require(['common'],function (commonJs) {
+        require(['common','bootstrap_select'],function (commonJs) {
             /*多选搜索*/
             // $.ajax({
             //     url: '',
@@ -184,13 +192,25 @@
             //         });
             //     }
             // });+
-            $("#chosen-select-join").chosen({
-                width:'98%',
-                disable_search_threshold: 5,//少于n项时隐藏搜索框
-                no_results_text: "未找到任何结果",
-                max_shown_results:50,//最多显示条数
-                search_contains: true,//关键字模糊搜索
+            // $("#chosen-select-join").chosen({
+            //     width:'98%',
+            //     disable_search_threshold: 5,//少于n项时隐藏搜索框
+            //     no_results_text: "未找到任何结果",
+            //     max_shown_results:50,//最多显示条数
+            //     search_contains: true,//关键字模糊搜索
+            // });
+            $('.selectpicker').selectpicker();
+            /*输入选择后清除输入框内容*/
+            $('.selectpicker').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+                if($('.bs-searchbox input').val()){
+                    $('.bs-searchbox input').val('');
+                    $('.selectpicker').selectpicker('refresh');
+                }
+                var a = $('.selectpicker').val();
+               console.log(b = a.join(","))
             });
+
+
             /*环形进度条*/
             commonJs.radialobj('#indicatorContainer7',20,25,5);
             commonJs.radialobj('#indicatorContainer8',100,25,5);

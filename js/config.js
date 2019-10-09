@@ -20,7 +20,7 @@ require.config({
         'toastr':"js/lib/toastr",
         'chosen':"js/lib/chosen.jquery.min",
         'bootstrapValidator':"js/lib/bootstrapValidator.min",
-        'data':"js/lib/data"
+        'ystep':"js/lib/ystep"
     },
     shim:{
         jquery: {
@@ -60,6 +60,9 @@ require.config({
             deps: ['jquery'],
         }
         ,bootstrapValidator:{
+            deps: ['jquery'],
+        }
+        ,ystep:{
             deps: ['jquery'],
         }
     },

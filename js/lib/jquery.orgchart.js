@@ -1141,7 +1141,7 @@
       if (opts.nodeTemplate) {
         $nodeDiv.append(opts.nodeTemplate(data));
       } else {
-        $nodeDiv.append('<div class="title">' + data[opts.nodeTitle] + '</div>')
+        $nodeDiv.append('<div class="title">' + data[opts.nodeTitle] + '<span class="relation-span" style="margin-right: 5px">权重'+ (data[opts.nodeWeight] || '') +'</span></div>')
           .append(typeof opts.nodeContent !== 'undefined' ? '<div class="content"><p>' + (data[opts.nodeContent] || '') + '<span class="relation-span">' + (data[opts.nodeTarget] || '') + '</span></p><div class="progress">\n' +
               '<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="' + (data[opts.nodeProgress] || '') + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + (data[opts.nodeProgress] || '') + '%;min-width: 2em;">\n' +
               '' + (data[opts.nodeProgress] || '') + '%' +
